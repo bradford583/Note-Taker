@@ -2,7 +2,7 @@ const fs = require('fs')
 const {
     createNewNote,
     filterByQuery
-} = require('../lib/notes.js');
+} = require('../lib/notes');
 
 
 jest.mock('fs');
