@@ -8,8 +8,8 @@ const fs = require('fs');
 const PORT = process.env.PORT || 3001;
 
 //routes
-const apiRoutes = require('./routes/apiRoutes');
-const hmtlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require("./routes/apiRoutes");
+const hmtlRoutes = require("./routes/htmlRoutes");
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
