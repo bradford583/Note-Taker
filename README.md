@@ -4,6 +4,7 @@
 
 ### Packages used in this application include: Express, Inquirer, fs, & Path
 
-"./public/assets/img/note-taker-hoomepage.png"
 
-"./public/assets/img/note-taker-notes-page.png"
+
+!(https://user-images.githubusercontent.com/87334834/136720876-c01afa00-a83b-4250-9d10-c3dcb944d951.png)
+!(https://user-images.githubusercontent.com/87334834/136720878-72d14760-18cd-4de2-a38c-0257945bb900.png)
