@@ -6,7 +6,7 @@ const {
     validateNotes
 } = require('../../lib/notes');
 
-const {notes} = require('../../data/notes');
+const {notes} = require('../../lib/notes');
 
 //get routes
 router.get('/notes', (req, res) => {
