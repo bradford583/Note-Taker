@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
-router.get("/api/notes", (req, res) => {
+router.get("/notes", (req, res) => {
     //get notes on page
     fs.readFile(path.join(__dirname, '../../db/db.json'), 'utf8', (err,data) => {
         if (err) throw err;
@@ -12,7 +12,7 @@ router.get("/api/notes", (req, res) => {
     });
 });
 
-router.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
     const newNote = req.body;
     newNote.id = uuidv4()
 
@@ -30,14 +30,14 @@ router.post('/api/notes', (req, res) => {
     });
 });
 
-router.delete('/api/notes/:id', (req, res) => {
+router.delete('/notes/:id', (req, res) => {
     const id = req.params.id;
 
     return fs.readFile(path.join(__dirname, '../../db/db.json'), 'utf8', (err, data) => {
         if (err) throw err;
         const allNotes = JSON.parse(data);
 
-        const filteredNotes = allNotes.filter((note) => id !==noteid);
+        const filteredNotes = allNotes.filter((note) => id !==note.id);
 
         fs.writeFile(path.join(__dirname, '../../db/db.json'), JSON.stringify(filteredNotes), 'utf8', () => {
             res.status(200).json({ success:true });
